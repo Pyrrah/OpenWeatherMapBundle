@@ -17,7 +17,7 @@ class OpenWeatherMapExtension extends AbstractExtension implements OWMHelperInte
     protected $baseHelper;
 
     /**
-     * @param GravatarHelperInterface $helper
+     * @param OpenWeatherMapHelperInterface $helper
      */
     public function __construct(OWMHelperInterface $helper)
     {
