@@ -12,12 +12,12 @@ use Pyrrah\OpenWeatherMapBundle\Templating\Helper\OpenWeatherMapHelperInterface 
 class OpenWeatherMapExtension extends AbstractExtension implements OWMHelperInterface
 {
     /**
-     * @var OpenWeatherMapHelperInterface
+     * @var OWMHelperInterface
      */
     protected $baseHelper;
 
     /**
-     * @param OpenWeatherMapHelperInterface $helper
+     * @param OWMHelperInterface $helper
      */
     public function __construct(OWMHelperInterface $helper)
     {
