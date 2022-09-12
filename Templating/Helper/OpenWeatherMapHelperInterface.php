@@ -1,6 +1,6 @@
 <?php
 
-namespace Pyrrah\GravatarBundle\Templating\Helper;
+namespace Pyrrah\OpenWeatherMapBundle\Templating\Helper;
 
 interface OpenWeatherMapHelperInterface
 {

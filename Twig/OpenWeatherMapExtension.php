@@ -1,6 +1,6 @@
 <?php
 
-namespace Pyrrah\GravatarBundle\Twig;
+namespace Pyrrah\OpenWeatherMapBundle\Twig;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
