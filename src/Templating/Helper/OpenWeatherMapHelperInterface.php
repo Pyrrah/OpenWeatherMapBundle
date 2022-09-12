@@ -7,7 +7,7 @@ interface OpenWeatherMapHelperInterface
     /**
      * Returns weather for a city given.
      *
-     * @param string $city
+     * @param $city
      *
      * @return string
      */
