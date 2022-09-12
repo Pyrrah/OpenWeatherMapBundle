@@ -29,12 +29,12 @@ Installation
   2. Check configuration file is correctly installed, and edit the default values with yours ([Official API docs](https://openweathermap.org/api)) :
 
   ```yaml
-    # config/packages/pyrrah_openweathermap.yaml
-    pyrrah_open_weather_map:
-        api_key: your_api_key
-        api_url: https://api.openweathermap.org/data/2.5/
-        units: metric
-        language: en
+# config/packages/pyrrah_open_weather_map.yaml
+pyrrah_open_weather_map:
+    api_key: your_api_key
+    api_url: https://api.openweathermap.org/data/2.5/
+    units: metric
+    language: en
   ```
 
 Routing (optional)
