@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="templating.helper.openweathermap.class">Pyrrah\OpenWeatherMapBundle\Templating\Helper\OpenWeatherMapHelper</parameter>
+        <parameter key="twig.extension.openweathermap.class">Pyrrah\OpenWeatherMapBundle\Twig\OpenWeatherMapExtension</parameter>
+        <parameter key="pyrrah.openweathermap.client.class">Pyrrah\OpenWeatherMapBundle\Services\Client</parameter>
+    </parameters>
+
+    <services>
+        <service id="pyrrah.openweathermap.client" class="%pyrrah.openweathermap.client.class%" />
+
+        <service id="templating.helper.openweathermap" class="%templating.helper.openweathermap.class%">
+            <tag name="templating.helper" alias="openweathermap" />
+            <argument type="service" id="pyrrah.openweathermap.client" />
+            <argument type="service" id="router" />
+        </service>
+
+        <service id="twig.extension.openweathermap" class="%twig.extension.openweathermap.class%">
+            <tag name="twig.extension" alias="openweathermap" />
+            <argument type="service" id="templating.helper.openweathermap" />
+        </service>
+    </services>
+</container>
