@@ -11,7 +11,7 @@ use Symfony\Component\Templating\Helper\Helper;
  *
  * @author Pierre-Yves Dick <hello@pierreyvesdick.fr>
  */
-class GravatarHelper extends Helper implements OpenWeatherMapHelperInterface
+class OpenWeatherMapHelper extends Helper implements OpenWeatherMapHelperInterface
 {
     /**
      * @var Pyrrah\OpenWeatherMapBundle\Services\Client
