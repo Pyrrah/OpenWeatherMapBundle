@@ -85,7 +85,7 @@ class Client
 
         $requestQueryParts = array();
         foreach ($parameters as $key => $value) {
-            $requestQueryParts[] = $key.'='.rawurlencode($value);
+            $requestQueryParts[] = $key.'='.rawurlencode((string) $value);
         }
         $baseUrl .= '?'.implode('&', $requestQueryParts);
 
