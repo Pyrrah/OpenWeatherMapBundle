@@ -2,7 +2,6 @@
 
 namespace Pyrrah\OpenWeatherMapBundle\DependencyInjection;
 
-use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
@@ -10,15 +9,17 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class PyrrahOpenWeatherMapExtension extends Extension
 {
-    public function load(array $configs, ContainerBuilder $container)
+    /**
+     * {@inheritDoc}
+     */
+    public function load(array $configs, ContainerBuilder $container): void
     {
-        $loader = new XmlFileLoader($container, new FileLocator(array(__DIR__.'/../Resources/config')));
-        $loader->load('config.xml');
-
         $configuration = new Configuration();
-        $processor = new Processor();
-        $config = $processor->process($configuration->getConfigTreeBuilder()->buildTree(), $configs);
+        $config = $this->processConfiguration($configuration, $configs);
 
-        $container->getDefinition('pyrrah.openweathermap.client')->addArgument($config);
+        $container->setParameter('pyrrah.openweathermap.client', $config);
+
+        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('config.xml');
     }
 }
