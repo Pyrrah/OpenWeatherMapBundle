@@ -23,7 +23,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('appid')->->isRequired()->cannotBeEmpty()->end()
+                ->scalarNode('appid')->isRequired()->cannotBeEmpty()->end()
                 ->scalarNode('api_url')->defaultValue('https://api.openweathermap.org/data/2.5/')->end()
                 ->scalarNode('units')->defaultValue('metric')->end()
                 ->scalarNode('lang')->defaultValue('en')->end()
