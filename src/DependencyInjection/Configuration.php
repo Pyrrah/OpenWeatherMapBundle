@@ -25,7 +25,7 @@ class Configuration implements ConfigurationInterface
                     ->scalarNode('appid')->defaultValue('your_api_key')->end()
                     ->scalarNode('api_url')->defaultValue('https://api.openweathermap.org/data/2.5/')->end()
                     ->scalarNode('units')->defaultValue('metric')->end()
-                    ->scalarNode('language')->defaultValue('en')->end()
+                    ->scalarNode('lang')->defaultValue('en')->end()
                 ->end();
 
         return $treeBuilder;
