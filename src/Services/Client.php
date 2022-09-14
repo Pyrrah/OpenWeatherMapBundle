@@ -69,8 +69,8 @@ class Client
      */
     public function query($name, $parameters = array())
     {
-        if (!isset($parameters['api_key'])) {
-            $parameters['api_key'] = $this->apiKey;
+        if (!isset($parameters['appid'])) {
+            $parameters['appid'] = $this->apiKey;
         }
 
         if (!isset($parameters['units'])) {
