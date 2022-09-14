@@ -40,7 +40,7 @@ class OpenWeatherMapHelper extends Helper implements OpenWeatherMapHelperInterfa
      */
     public function getWeather($city)
     {
-        return $this->client->query('weather', array('q' => $city));
+        return $this->client->getWeather($city);
     }
 
     /**
