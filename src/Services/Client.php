@@ -71,6 +71,7 @@ class Client
     {
         if (!isset($parameters['api_key'])) {
             $parameters['api_key'] = $this->apiKey;
+        }
 
         if (!isset($parameters['units'])) {
             $parameters['units'] = $this->units;
