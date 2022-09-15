@@ -23,10 +23,10 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('appid')->defaultValue('your_appid')->end()
-                ->scalarNode('api_url')->defaultValue('https://api.openweathermap.org/data/2.5/')->end()
-                ->scalarNode('units')->defaultValue('metric')->end()
-                ->scalarNode('lang')->defaultValue('en')->end()
+                ->scalarNode('appid')->defaultValue('your_appid')->info('Unique API key given by OpenWeatherMap')->end()
+                ->scalarNode('api_url')->defaultValue('https://api.openweathermap.org/data/2.5/')->info('URL API of OpenWeatherMap')->end()
+                ->scalarNode('units')->defaultValue('metric')->info('Unit of measure: standard/metric/imperial')->end()
+                ->scalarNode('lang')->defaultValue('en')->info('Display language')->end()
             ->end();
 
         return $treeBuilder;
