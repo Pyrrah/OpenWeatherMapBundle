@@ -11,7 +11,7 @@ This bundle allows you to easily get the weather for a city or a location, via t
 Requirements
 ------------
 
-* Symfony 5 or 6
+* Symfony 5.* to 7.*
 * API Key (APPID) from [OpenWeatherMap](https://home.openweathermap.org/users/sign_up)*²*
 * Dependencies: [`Guzzle`](https://packagist.org/packages/guzzlehttp/guzzle)
 
