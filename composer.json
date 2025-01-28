@@ -1,8 +1,8 @@
 {
     "name": "pyrrah/openweathermap-bundle",
-    "description": "The simple way to obtain currently weather from OpenWeatherMap API, for Symfony 5 to 6.",
+    "description": "The simple way to obtain currently weather from OpenWeatherMap for Symfony 5 to 7",
     "homepage": "https://github.com/Pyrrah/OpenWeatherMapBundle",
-    "keywords": ["pyrrah", "openweathermap", "open", "weather", "map", "weathermap", "weathermap symfony5", "weathermap symfony6"],
+    "keywords": ["pyrrah", "openweathermap", "open", "weather", "map", "weathermap", "weathermap symfony5", "weathermap symfony6", "weathermap symfony7"],
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
@@ -11,7 +11,10 @@
             "homepage": "https://github.com/Pyrrah"
         }
     ],
-    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://github.com/Pyrrah/OpenWeatherMapBundle/issues"
+    },
+    "prefer-stable": true,
     "require": {
         "php": ">=7.2.5",
         "guzzlehttp/guzzle": "^7.5"
