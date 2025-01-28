@@ -10,13 +10,14 @@ class Configuration implements ConfigurationInterface
     /**
      * @return TreeBuilder
      */
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('pyrrah_open_weather_map');
 
         if (method_exists($treeBuilder, 'getRootNode')) {
             $rootNode = $treeBuilder->getRootNode();
         } else {
+            // BC for symfony/config < 4.2
             $rootNode = $treeBuilder->root('pyrrah_open_weather_map');
         }
 
